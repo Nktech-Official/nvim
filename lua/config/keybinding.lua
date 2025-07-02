@@ -25,8 +25,9 @@ vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, {})
 vim.keymap.set("n", "<leader>gf", vim.lsp.buf.format, {})
 
 -- NVIM TREEE
-vim.keymap.set("n", "<C-n>", ":Neotree filesystem reveal left<CR>", {})
+vim.keymap.set("n", "<C-n>", ":Neotree filesystem toggle left<CR>", {})
 vim.keymap.set("n", "<leader>bf", ":Neotree buffers reveal float<CR>", {})
+vim.keymap.set("n", "<Leader>f", ":Neotree focus<CR>", { noremap = true, silent = true })
 
 -- Normal mode: move line up/down
 vim.keymap.set("n", "<C-J>", ":m .+1<CR>==", silent_opts)
@@ -43,3 +44,7 @@ vim.keymap.set("v", "<C-S-K>", ":m '<-2<CR>gv=gv", silent_opts)
 -- git key MAPS
 vim.keymap.set("n", "<leader>gt", ":Gitsigns toggle_current_line_blame<CR>", {})
 vim.keymap.set("n", "<leader>gp", ":Gitsigns preview_hunk<CR>", {})
+
+-- Clipboard copy
+vim.keymap.set({ "n", "v" }, "<C-S-c>", '"+y', { noremap = true, silent = true })
+vim.keymap.set("n", "<C-S-v>", '"+p', { noremap = true, silent = true })
