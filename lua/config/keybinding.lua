@@ -44,7 +44,7 @@ vim.keymap.set("v", "<C-S-K>", ":m '<-2<CR>gv=gv", silent_opts)
 -- git key MAPS
 vim.keymap.set("n", "<leader>gt", ":Gitsigns toggle_current_line_blame<CR>", {})
 vim.keymap.set("n", "<leader>gp", ":Gitsigns preview_hunk<CR>", {})
-
+vim.keymap.set("n", "<leader>gl", ":LazyGit<CR>", {})
 -- Clipboard copy
 vim.keymap.set({ "n", "v" }, "<C-S-c>", '"+y', { noremap = true, silent = true })
 vim.keymap.set("n", "<C-S-v>", '"+p', { noremap = true, silent = true })
