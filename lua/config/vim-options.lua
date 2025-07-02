@@ -4,3 +4,7 @@ vim.cmd("set softtabstop=4")
 vim.cmd("set shiftwidth=4")
 vim.opt.number = true         -- absolute line numbers
 vim.opt.relativenumber = false -- optional: shows relative numbers
+vim.g.mapleader = " "
+vim.g.maplocalleader = "\\"
+
+
