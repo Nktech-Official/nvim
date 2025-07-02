@@ -5,7 +5,7 @@ return {
     config = function()
         local theme = require("catppuccin")
 
-        theme.setup({  transparent_background = true})
+   --     theme.setup({  transparent_background = true})
 
         vim.cmd.colorscheme "catppuccin"
     end
