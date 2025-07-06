@@ -8,8 +8,7 @@ return {
 			sources = {
 				builtins.formatting.stylua,
 				builtins.formatting.prettier,
-				builtins.diagnostics.eslint_d
-            },
+			},
 			on_attach = function(client, bufnr)
 				if client.supports_method("textDocument/formatting") then
 					-- Format on save

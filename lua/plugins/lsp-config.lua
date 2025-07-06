@@ -34,6 +34,18 @@ return {
 			lspconfig.html.setup({
 				capabilities = capabilities,
 			})
+			lspconfig.eslint.setup({
+				capabilities = capabilities,
+				on_attach = function(client, bufnr)
+					-- Disable formatting capability so it won't conflict or auto-format
+					client.server_capabilities.documentFormattingProvider = false
 				end,
+				settings = {
+					-- required if ESLint is not picking up project config automatically
+					-- adjust if needed
+					workingDirectory = { mode = "auto" },
+				},
+			})
+		end,
 	},
 }

@@ -13,8 +13,7 @@ vim.diagnostic.config({
 	update_in_insert = false, -- don't update in insert mode
 })
 
-vim.o.foldmethod = "syntax" -- or "indent" or "expr" if using treesitter
+vim.o.foldmethod = "expr" -- or "indent" or "expr" if using treesitter
+vim.o.foldexpr = "nvim_treesitter#foldexpr()"
 vim.o.foldenable = true
 vim.o.foldlevel = 99
-
-
